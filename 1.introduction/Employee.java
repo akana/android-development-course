@@ -29,6 +29,10 @@ public class Employee {
     return 0;
   }
 
+  public double calculateSalary() {
+    return this.salary;
+  }
+
   public static void main(String[] args) {
     Employee jame = new Employee("bond", "jame", 1970, 0.0, "Actor");
     System.out.println(jame.getFullName() + " " + jame.getAge());

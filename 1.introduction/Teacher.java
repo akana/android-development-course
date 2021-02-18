@@ -1,9 +1,14 @@
 public class Teacher extends Employee {
   private char gender;
+  private double salaryPerHour;
+  private int workedHourPerMonth;
 
-  public Teacher(String lastname, String firstname, int yearOfBirth, double salary, char gender) {
-    super(lastname, firstname, yearOfBirth, salary, "Teacher");
+  public Teacher(String lastname, String firstname, int yearOfBirth, char gender, double salaryPerHour,
+      int workedHourPerMonth) {
+    super(lastname, firstname, yearOfBirth, 0, "Teacher");
     this.gender = gender;
+    this.salaryPerHour = salaryPerHour;
+    this.workedHourPerMonth = workedHourPerMonth;
   }
 
   public String getFullName() {
@@ -15,9 +20,13 @@ public class Teacher extends Employee {
     }
   }
 
+  public double calculateSalary() {
+    return this.workedHourPerMonth * this.salaryPerHour;
+  }
+
   public static void main(String[] args) {
-    Teacher akana = new Teacher("mao", "akana", 1980, 500, 'M');
-    System.out.println(akana.getFullName() + ": " + akana.getJob());
+    Teacher akana = new Teacher("mao", "akana", 1980, 'M', 10.0, 40);
+    System.out.println(akana.getFullName() + ": " + akana.getJob() + ": " + akana.calculateSalary());
   }
 
 }
