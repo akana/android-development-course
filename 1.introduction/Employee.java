@@ -17,6 +17,10 @@ public class Employee {
     return this.firstname + " " + this.lastname;
   }
 
+  public String getJob() {
+    return this.job;
+  }
+
   public void setJob(String job) {
     this.job = job;
   }

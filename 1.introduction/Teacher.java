@@ -17,7 +17,7 @@ public class Teacher extends Employee {
 
   public static void main(String[] args) {
     Teacher akana = new Teacher("mao", "akana", 1980, 500, 'M');
-    System.out.println(akana.getFullName());
+    System.out.println(akana.getFullName() + ": " + akana.getJob());
   }
 
 }
